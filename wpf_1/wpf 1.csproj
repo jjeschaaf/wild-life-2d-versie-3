@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <RootNamespace>wpf_1</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\map2map.png" />
+    <None Remove="Images\wildLifeStartScherm1.png.png" />
+    <None Remove="Images\WildLifeStartScherm2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\map2map.png" />
+    <Content Include="Images\WildLifeStartScherm2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
