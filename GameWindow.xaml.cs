@@ -10,41 +10,63 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-
-namespace wpf_1
+namespace wild_life_2
 {
-    public partial class Window1 : Window
+    /// <summary>
+    /// Interaction logic for GameWindow.xaml
+    /// </summary>
+    public partial class GameWindow : Window
     {
-        public Window1()
+        private List<string> inventory = new();
+
+        public GameWindow()
         {
             InitializeComponent();
 
-            KeyDown += Window1_KeyDown;
+            KeyDown += GameWindow_KeyDown;
         }
 
-        private void Window1_KeyDown(object sender, KeyEventArgs e)
+        private void GameWindow_KeyDown(object sender, KeyEventArgs e)
         {
             double x = Canvas.GetLeft(Player);
             double y = Canvas.GetTop(Player);
 
             if (e.Key == Key.Left)
-            {
                 Canvas.SetLeft(Player, x - 10);
-            }
 
             if (e.Key == Key.Right)
-            {
                 Canvas.SetLeft(Player, x + 10);
-            }
 
             if (e.Key == Key.Up)
-            {
                 Canvas.SetTop(Player, y - 10);
-            }
 
             if (e.Key == Key.Down)
-            {
                 Canvas.SetTop(Player, y + 10);
+
+            CheckFruitPickup();
+        }
+
+        private void CheckFruitPickup()
+        {
+            Rect playerRect = new Rect(
+                Canvas.GetLeft(Player),
+                Canvas.GetTop(Player),
+                Player.Width,
+                Player.Height);
+
+            Rect fruitRect = new Rect(
+                Canvas.GetLeft(Vrucht),
+                Canvas.GetTop(Vrucht),
+                Vrucht.Width,
+                Vrucht.Height);
+
+            if (playerRect.IntersectsWith(fruitRect))
+            {
+                inventory.Add("Appel");
+
+                GameCanvas.Children.Remove(Vrucht);
+
+                MessageBox.Show("Appel opgepakt!");
             }
         }
     }
