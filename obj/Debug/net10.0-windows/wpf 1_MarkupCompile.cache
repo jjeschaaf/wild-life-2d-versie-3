@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\jjesc\source\repos\wild_life\wpf 1\obj\Debug\net10.0-windows\
+C:\NHL-Programming\wild-life-2d-versie-3\obj\Debug\net10.0-windows\
 wpf_1
 none
 false
 TRACE;DEBUG;NET;NET10_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NET10_0_OR_GREATER;NETCOREAPP1_0_OR_GREATER;NETCOREAPP1_1_OR_GREATER;NETCOREAPP2_0_OR_GREATER;NETCOREAPP2_1_OR_GREATER;NETCOREAPP2_2_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-C:\Users\jjesc\source\repos\wild_life\wpf 1\App.xaml
-2396499192
+C:\NHL-Programming\wild-life-2d-versie-3\App.xaml
+8-512566878
 
-52038619754
-206890450207
-GameWindow.xaml;MainWindow.xaml;
+611161583676
+206532413414
+GameWindow.xaml;MainWindow.xaml;wpf 1\App.xaml;wpf 1\GameWindow.xaml;wpf 1\MainWindow.xaml;wpf_1\App.xaml;wpf_1\GameWindow.xaml;wpf_1\MainWindow.xaml;
 
 True
 
